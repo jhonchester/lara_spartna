@@ -72,9 +72,9 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="url('/')">
+                        <!--<x-dropdown-link :href="url('/')">
                             {{ __('Home') }}
-                        </x-dropdown-link>
+                        </x-dropdown-link>-->
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
