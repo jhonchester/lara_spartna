@@ -1,4 +1,9 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <style>
+        .no-underline {
+            text-decoration: none; /* Remove underline */
+        }
+    </style>
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -12,21 +17,21 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"> 
-                    <x-nav-link :href="Auth::user()->usertype== 'admin' ? route('admin.dashboard') : route('dashboard') " :active="Auth::user()->usertype == 'admin' ? request()->routeIs('admin.dashboard'): request()->routeIs('dashboard')">
+                    <x-nav-link :href="Auth::user()->usertype== 'admin' ? route('admin.dashboard') : route('dashboard') " :active="Auth::user()->usertype == 'admin' ? request()->routeIs('admin.dashboard'): request()->routeIs('dashboard')" class="no-underline">
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
                     {{--admin links--}}
                     @if (Auth::user()->usertype=='admin')
-                    <x-nav-link href="admin/products" :active="request()->routeIs('admin.products')">
+                    <x-nav-link href="admin/products" :active="request()->routeIs('admin.products')" class="no-underline">
                         {{ __('Product') }}
                     </x-nav-link>
 
-                    <x-nav-link href="admin/category" :active="request()->routeIs('admin.category')">
+                    <x-nav-link href="admin/category" :active="request()->routeIs('admin.category')" class="no-underline">
                         {{ __('Category') }}
                     </x-nav-link>
 
-                    <x-nav-link href="admin/user" :active="request()->routeIs('admin.user')">
+                    <x-nav-link href="admin/user" :active="request()->routeIs('admin.user')" class="no-underline">
                         {{ __('User') }}
                     </x-nav-link>
 
@@ -35,15 +40,15 @@
 
                     {{--user links--}}
                     @if (Auth::user()->usertype=='user')
-                    <x-nav-link href="order" :active="request()->routeIs('user.order')">
+                    <x-nav-link href="order" :active="request()->routeIs('user.order')" class="no-underline">
                         {{ __('Order') }}
                     </x-nav-link>
 
-                    <x-nav-link href="favorite" :active="request()->routeIs('user.favorite')">
+                    <x-nav-link href="favorite" :active="request()->routeIs('user.favorite')" class="no-underline">
                         {{ __('Favorites') }}
                     </x-nav-link>
 
-                    <x-nav-link href="profile" :active="request()->routeIs('profile.edit')">
+                    <x-nav-link href="profile" :active="request()->routeIs('profile.edit')" class="no-underline">
                         {{ __('My Profile') }}
                     </x-nav-link>
 
@@ -68,7 +73,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('profile.edit')" class="no-underline">
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
@@ -82,7 +87,7 @@
 
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                                this.closest('form').submit();" class="no-underline">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
