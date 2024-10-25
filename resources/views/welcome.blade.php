@@ -27,9 +27,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 80px;
+    padding: 80px 80px 0; /* Added top padding */
     }
-
     #hero h4 {
     padding-bottom: 15px;
     font-size: 40px;

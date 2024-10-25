@@ -1,4 +1,10 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-transparent border-none absolute top-0 w-full z-10">
+    <style>
+        .no-underline {
+            text-decoration: none; /* Remove underline */
+        }
+    </style>
+
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -6,15 +12,15 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ url('/') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current" />
+                        <img src="{{ asset('images/logos/spartan.png') }}" alt="" class="block h-9 w-auto fill-current">
                     </a>
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ url('/') }}" :active="request()->routeIs('home')">{{ __('Home') }}</x-nav-link>
-                    <x-nav-link href="{{ url('/') }}" :active="request()->routeIs('services')">{{ __('Services') }}</x-nav-link>
-                    <x-nav-link href="{{ url('/') }}" :active="request()->routeIs('about')">{{ __('About') }}</x-nav-link>
-                    <x-nav-link href="{{ url('/') }}" :active="request()->routeIs('contact')">{{ __('Contact Us') }}</x-nav-link>
+                    <x-nav-link href="{{ url('/') }}" :active="request()->routeIs('home')" class="no-underline">{{ __('Home') }}</x-nav-link>
+                    <x-nav-link href="{{ url('/services') }}" :active="request()->routeIs('services')" class="no-underline">{{ __('Services') }}</x-nav-link>
+                    <x-nav-link href="{{ url('/about') }}" :active="request()->routeIs('about')" class="no-underline">{{ __('About') }}</x-nav-link>
+                    <x-nav-link href="{{ url('/contact-us') }}" :active="request()->routeIs('contact')" class="no-underline">{{ __('Contact Us') }}</x-nav-link>
                 </div>
             </div>
             <!-- Settings Dropdown -->
@@ -22,9 +28,9 @@
                 @auth
                     <x-nav-link href="{{ Auth::user()->userType == 'admin' ? url('/admin/dashboard') : url('/user/dashboard') }}" :active="request()->routeIs('dashboard')">{{ __('Dashboard') }}</x-nav-link>
                 @else
-                    <x-nav-link href="{{ url('/login') }}" :active="request()->routeIs('login')">{{ __('Login') }}</x-nav-link>
+                    <x-nav-link href="{{ url('/login') }}" :active="request()->routeIs('login')" class="no-underline">{{ __('Login') }}</x-nav-link>
                     @if (Route::has('register'))
-                        <x-nav-link href="{{ url('/register') }}" :active="request()->routeIs('register')">{{ __('Register') }}</x-nav-link>
+                        <x-nav-link href="{{ url('/register') }}" :active="request()->routeIs('register')" class="no-underline">{{ __('Register') }}</x-nav-link>
                     @endif
                 @endauth
             </div>
@@ -51,9 +57,9 @@
                         @auth
                             <x-responsive-nav-link href="{{ Auth::user()->userType == 'admin' ? url('/admin/dashboard') : url('/user/dashboard') }}" :active="request()->routeIs('dashboard')">{{ __('Dashboard') }}</x-responsive-nav-link>
                         @else
-                            <x-responsive-nav-link href="{{ url('/login') }}" :active="request()->routeIs('login')">{{ __('Login') }}</x-responsive-nav-link>
+                            <x-responsive-nav-link href="{{ url('/login') }}" :active="request()->routeIs('login')" class="no-underline">{{ __('Login') }}</x-responsive-nav-link>
                             @if (Route::has('register'))
-                                <x-responsive-nav-link href="{{ url('/register') }}" :active="request()->routeIs('register')">{{ __('Register') }}</x-responsive-nav-link>
+                                <x-responsive-nav-link href="{{ url('/register') }}" :active="request()->routeIs('register')" class="no-underline">{{ __('Register') }}</x-responsive-nav-link>
                             @endif
                         @endauth
                     </div>
