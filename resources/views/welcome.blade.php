@@ -73,7 +73,7 @@
     justify-content: center;
     }
     #banners .big-banners div {
-    min-width: 600px;
+    min-width: 575px;
     margin: 15px;
     height: 300px;
     display: flex;

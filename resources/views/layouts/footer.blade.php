@@ -99,11 +99,11 @@
             <div class="col-md-6 about text-center mt-4 mt-md-0">
                 <h3>In Partnership with</h3>
                 <div class="d-flex justify-content-center flex-wrap">
-                    <img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="" class="about-logo me-2"/>
-                    <img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="" class="about-logo me-2"/> 
-                    <img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="" class="about-logo me-2"/>  
-                    <img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="" class="about-logo me-2"/>
-                    <img src="https://1000logos.net/wp-content/uploads/2023/04/Starbucks-logo.png" alt="" class="about-logo me-2"/>
+                    <img src="{{ asset('images/logos/cas.png') }}" alt="" class="about-logo me-2"/>
+                    <img src="{{ asset('images/logos/cet.png') }}" alt="" class="about-logo me-2"/> 
+                    <img src="{{ asset('images/logos/cabeihm.png') }}" alt="" class="about-logo me-2"/>  
+                    <img src="{{ asset('images/logos/cics.png') }}" alt="" class="about-logo me-2"/>
+                    <img src="{{ asset('images/logos/cte.png') }}" alt="" class="about-logo me-2"/>
                 </div>
                 <p>College of Arts and Sciences</p>
                 <p>College of Engineering and Technology</p>
