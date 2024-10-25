@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ProductController;
@@ -25,6 +26,7 @@ Route::middleware(['auth', 'userMiddleware'])->group(function(){
 
     Route::get('dashboard',[UserController::class,'index'])->name('dashboard');
     Route::get('favorite', [FavoriteController::class,'index'])->name('user.favorite');
+    Route::get('order', [OrderController::class,'index'])->name('user.order');
 
 });
 
