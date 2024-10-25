@@ -150,7 +150,8 @@
         <h2>Super value deals</h2>
         <h1>On all products</h1>
         <p>save more coupons & up to 70% off!</p>
-        <button>Shop now</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Shop now</button>
+
       </section>
 
       <section id="banners" class="section-p1">
@@ -183,11 +184,52 @@
           </div>
         </div>
       </section>
+      <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Existing Laravel Login Form -->
+        <form method="POST" action="{{ route('login') }}">
+          @csrf
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required autofocus>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="remember" id="remember">
+              <label class="form-check-label" for="remember">Remember Me</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <div class="mt-3">
+          @if (Route::has('password.request'))
+            <a class="btn btn-link" href="{{ route('password.request') }}">
+              Forgot Your Password?
+            </a>
+          @endif
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
 
 @section('script')
-<script>
-    // Custom JavaScript can be added here
-</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
+
