@@ -89,11 +89,11 @@
                 </address>
                 <h3 class="soc">Follow Us</h3>
                 <div class="socials mt-3">
-                    <a href="#" class="me-2"><i class="fa-brands fa-facebook-square"></i></a>
-                    <a href="#" class="me-2"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/chesterguijoba" class="me-2"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://github.com/jhonchester" class="me-2"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="me-2"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#" class="me-2"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/jhonchester__/" class="me-2"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.threads.net/@jhonchester__?xmt=AQGz4lhziuDBcP8oughVGt2yLJ49BZUeqbLL6XCMBFkaBMQ"><i class="fa-brands fa-threads"></i></a>
                 </div>
             </div>
             <div class="col-md-6 about text-center mt-4 mt-md-0">
